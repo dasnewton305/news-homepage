@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+    /* fonts */
+    --ff-default: 'Inter', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
+
+    --fs-400: 0.9375rem;
+
+    /* colors */
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+body {
+    background: var(--off-white);
+    font-family: var(--ff-default);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 4rem auto;
+}
+
+nav {
+    width: 40%;
+}
+
+.navlist {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.navlist>li>a {
+    text-decoration: none;
+    color: var(--dark-grayish-blue);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.navlist>li>a:hover {
+    color: var(--soft-red);
+}
+
+.menu {
+    width: 5rem;
+    height: 5rem;
+    display: none;
+}
+
+.icon {
+    background: url(assets/images/icon-menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s ease;
+}
+
+.icon-x {
+    background: url(assets/images/icon-menu-close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s ease;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.hero-article>picture>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero-desc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.hero-desc>h1 {
+    width: 9ch;
+    font-weight: var(--fw-extra-bold);
+    font-size: 4rem;
+    color: var(--very-dark-blue);
+    line-height: 1.2;
+}
+
+.hero-desc>div>p {
+    font-size: 1.2rem;
+    width: 80%;
+    color: var(--dark-grayish-blue);
+}
+
+.hero-desc>div>button {
+    margin-top: 3rem;
+    border-style: none;
+    height: 4rem;
+    width: 40%;
+    background: var(--soft-red);
+    color: var(--off-white);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.hero-desc>div>button:hover {
+    cursor: pointer;
+    background-color: var(--very-dark-blue);
+}
+
+.new-articles {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    background: var(--very-dark-blue);
+    color: var(--off-white);
+}
+
+.new-articles>h2 {
+    color: var(--soft-orange);
+    font-size: 3rem;
+
+}
+
+.what-new {
+    margin: 2rem 0;
+}
+
+.what-new:not(:last-child) {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--grayish-blue);
+}
+
+.what-new>h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.what-new>h3:hover {
+    cursor: pointer;
+    color: var(--soft-orange);
+}
+
+.what-new>p {
+    font-size: 1.2rem;
+    color: var(--grayish-blue);
+}
+
+
+.info-articles {
+    display: flex;
+    grid-column: span 2;
+    margin-top: 2rem;
+}
+
+.information {
+    display: flex;
+    gap: 2rem;
+}
+
+.information>img {
+    width: 40%;
+    object-fit: cover;
+}
+
+.information>div>h2 {
+    font-size: 2.5rem;
+    color: var(--grayish-blue);
+}
+
+.information>div>h3 {
+    font-size: 1.5rem;
+    font-weight: var(--fw-extra-bold);
+    color: var(--very-dark-blue);
+}
+
+.information>div>h3:hover {
+    cursor: pointer;
+    color: var(--soft-red);
+}
+
+.information>div>p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    width: 60%;
+    color: var(--dark-grayish-blue);
+}
+
+#backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    pointer-events: none;
+    display: none;
+}
+
+#backdrop.visible {
+    display: block;
+    pointer-events: all;
+}
+
+
+
+
+
+
+
+@media (max-width: 990px) {
+    body {
+        min-height: 100vh;
+    }
+
+    header {
+        margin: 2rem 1rem;
+    }
+
+    .menu {
+        display: block;
+        z-index: 12;
+    }
+
+    .menu:hover {
+        cursor: pointer;
+    }
+
+
+    nav {
+        background: var(--off-white);
+        height: 100vh;
+        width: 70%;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        transition: all 0.5s ease;
+        z-index: 11;
+    }
+
+    .navlist {
+        flex-direction: column;
+        height: 30%;
+        position: absolute;
+        top: 15%;
+    }
+
+    .navlist>li>a {
+        color: var(--very-dark-blue);
+    }
+
+    .open {
+        right: 0;
+    }
+
+    .hero-desc>h1 {
+        font-size: 3rem;
+    }
+
+    .hero-desc>div>p {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .hero-desc>div>button {
+        height: 2.5rem;
+        width: 50%;
+        margin-top: 1rem;
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .new-articles {
+        padding: 1rem 1rem;
+    }
+
+    .new-articles>h2 {
+        font-size: 2rem;
+    }
+
+    .what-new {
+        margin: 1rem 0;
+    }
+
+    .what-new:not(:last-child) {
+        padding-bottom: 2rem;
+    }
+
+    .what-new>h3 {
+        font-size: 1.2rem;
+    }
+
+    .what-new>p {
+        font-size: 0.9375rem;
+    }
+
+    .info-articles {
+        gap: 2rem;
+    }
+
+    .information>img {
+        width: 8rem;
+        object-fit: cover;
+    }
+
+    .information>div>h2 {
+        font-size: 2rem;
+    }
+
+    .information>div>h3 {
+        font-size: 1.2rem;
+    }
+
+    .information>div>p {
+        font-size: 0.9375rem;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 640px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 1rem;
+    }
+
+    .hero-desc {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .hero-desc>h1 {
+        width: 80%;
+        font-size: 2.5rem;
+    }
+
+    .hero-desc>div>p {
+        font-size: 0.9375rem;
+        width: 100%;
+    }
+
+    .hero-desc>div>button {
+        height: 2.5rem;
+        width: 50%;
+        margin-top: 1rem;
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .new-articles {
+        padding: 1rem 1rem;
+    }
+
+    .new-articles>h2 {
+        font-size: 2rem;
+    }
+
+    .what-new {
+        margin: 1rem 0;
+    }
+
+    .what-new:not(:last-child) {
+        padding-bottom: 2rem;
+    }
+
+    .what-new>h3 {
+        font-size: 1.2rem;
+    }
+
+    .what-new>p {
+        font-size: 0.9375rem;
+    }
+
+    .info-articles {
+        flex-direction: column;
+        gap: 2rem
+    }
+
+    .information {
+        gap: 1rem;
+    }
+
+    .information>img {
+        width: 10rem;
+    }
+
+    .information>div>h2 {
+        font-size: 2rem;
+    }
+
+    .information>div>h3 {
+        font-size: 1.2rem;
+    }
+
+    .information>div>p {
+        font-size: 0.9375rem;
+        width: 100%;
+    }
+
+}
